@@ -1,0 +1,260 @@
+* {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+html, body, #root, .App {
+    height: 100%;
+    margin: auto 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.breadcrumb {
+    display: inline-block;
+    user-select: none;
+    opacity: 0;
+    transform: translateX(-20%);
+    transition: all 0.6s;
+}
+
+.container {
+    opacity: 0;
+    transition: all 0.6s;
+    height: calc(100% - 100px);
+}
+
+.breadcrumb.appear {
+    transform: translateX(0);
+}
+
+.appear {
+    opacity: 1;
+}
+
+nav {
+    min-width: 1000px;
+    background-color: #26a69a;
+    z-index: 1000;
+}
+
+nav a.button-collapse {
+    display: block;
+}
+
+.side-menu-xl {
+    display: none;
+}
+
+.side-menu .btn {
+    display: block;
+    margin: 10px 0;
+    background-color: #26a69a;
+    text-transform: none;
+}
+
+.btn.active {
+    background-color: #0d6d64 !important;
+}
+
+.graph-edit {
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px 10px 0;
+    padding: 10px 0;
+    touch-action: none;
+}
+
+svg text {
+    pointer-events: none;
+    touch-action: none;
+    user-select: none;
+}
+
+svg circle {
+    touch-action: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+svg path line {
+    touch-action: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.breadcrumb {
+    font-size: 26px;
+}
+
+.small {
+    height: 200px !important;
+}
+
+.nav-wrapper a, .card {
+    cursor: pointer;
+}
+
+.thumb.active {
+    box-shadow: #555 1px 1px 5px;
+    z-index: 1;
+}
+
+.edgeClickHelper {
+    cursor: pointer;
+}
+
+.btn, .btn-flat {
+    text-transform: none !important;
+}
+
+.clear-graph {
+    width: 227.5px;
+    bottom: 10px;
+    text-align: center;
+    display: block;
+    position: absolute;
+}
+
+.side-menu-xl .side-menu .clear-graph {
+    width: 200.5px;
+}
+
+circle, text {
+    transition: stroke 1s, color 1s;
+}
+
+@media screen and (min-width: 1700px) {
+    .side-nav {
+        position: absolute;
+        transform: translateX(0) !important;
+        top: 65px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    nav a.button-collapse {
+        display: none;
+    }
+}
+
+.blurred {
+    filter: blur(3px);
+}
+
+.search {
+    transition: all 0.5s;
+    position: absolute;
+    top: 10px;
+    text-align: left;
+    vertical-align: middle;
+    width: 36px !important;
+    height: 36px !important;
+    right: 10px;
+    border-radius: 50%;
+}
+
+.search:hover {
+    background: #fff;
+    cursor: pointer;
+}
+
+.search i {
+    transition: all 1s;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    line-height: 150%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.search i:hover {
+    color: #000;
+}
+
+.search.active {
+    width: 12em !important;
+    background: #fff;
+    border-radius: 1em;
+    padding: 0 1em;
+}
+
+.search.active input {
+    border: none !important;
+    height: 36px !important;
+}
+
+@media only screen and (min-width: 601px) {
+    .search {
+        top: 15px;
+        width: 36px !important;
+        height: 36px !important;
+        right: 15px;
+    }
+
+    .search.active input {
+        height: 36px !important;
+    }   
+}
+
+.nothing-found:before {
+    content: 'sentiment_dissatisfied'
+}
+
+.nothing-found:active:before {
+    content: 'sentiment_very_satisfied'
+}
+
+.search.active ul {
+    position: absolute;
+    top: 20px;
+    background: #fff;
+    width: 12em !important;
+    right: 0;
+    margin: 0;
+    padding: 20px 0 5px 0;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.17), -1px 1px 1px rgba(0, 0, 0, 0.17);
+    border-radius: 0 0px 5px 5px;
+}
+
+.search.active ul li {
+    padding: 5px 10px;
+}
+
+.search.active ul li:hover, .search.active ul li.selected{
+    padding: 5px 10px;
+    background-color: #26a69a;
+    color: #fff !important;
+}
+
+.search.active input {
+    position: absolute;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#graphLoad .right.circle {
+    border-radius: 0;
+}
+
+#modalLoad {
+    z-index: 10005 !important;
+    opacity: 1 !important;
+    background: #fff !important;
+}
+
+#jsonInput {
+    overflow-y: scroll;
+    padding: 0;
+    resize: none;
+    margin: 0.4rem 0 0 0;
+    max-height: 8rem;
+    min-height: 8rem;
+}
